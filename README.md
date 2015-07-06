@@ -6,7 +6,7 @@ and writes them into a directory.
 As argument, this script takes one or more HP webpage URLs and a directory path.
 
 ### Usage
-    `hp-product-fetcher [options] hp_webpage_url... directory`
+hp-product-fetcher [options] hp_webpage_url... directory
 
 ### Options
     -d, --delay D                    Set the delay between requests, in seconds.
@@ -20,9 +20,9 @@ As argument, this script takes one or more HP webpage URLs and a directory path.
     -h, --help                       Display this help message and exit.
 
 ### Usage example
-    ```hp-product-fetcher --products 100 --verbose \
-      'http://www.hp.com/country/us/en/hho/welcome.html' \
-      ~/HP_data_audit/Available_HP_products```
+```hp-product-fetcher --products 100 --verbose \
+  'http://www.hp.com/country/us/en/hho/welcome.html' \
+  ~/HP_data_audit/Available_HP_products```
 
 ## Installation
 
