@@ -35,4 +35,4 @@ and it will also run on Windows, Apple's OS X, and many UNIX-like operating syst
 You can visit [the GitHub repository](https://github.com/doga/hp-product-fetcher)
 to file a bug report and, even better, send me a pull request if you would like
 to contribute.
-There is also a [short tutorial](https://youtu.be/PhlWGvp8w3g) on YouTube.
+There is also a [short tutorial](http://youtu.be/w59X3rGqefA) on YouTube.

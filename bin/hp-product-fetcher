@@ -3,7 +3,7 @@
 # Fetches product pages from the HP website
 
 APP_WEBSITE = "https://github.com/doga/hp-product-fetcher"
-APP_VERSION = "1.0.0"
+APP_VERSION = "1.0.2"
 RUBY_MIN_VERSION = "2.1"
 
 #MODE = :development
@@ -102,7 +102,7 @@ class Fetcher
 						url == product[:url]
 					end
 					debug product
-					page = get product[:url]
+					page = get product[:url], false
 					next unless page
 					@products_downloaded += 1
 					downloaded_urls << product[:url]
@@ -206,7 +206,7 @@ class Fetcher
 			end
 			categories
 		end
-		def get url, retries = 3
+		def get url, remove_line_breaks = true, retries = 3
 			doc = ""
 			succeeded = false
 			1.upto retries do |i|
@@ -217,7 +217,8 @@ class Fetcher
 					open url, "User-Agent" => USER_AGENT do |f|
 					# 	raise "Error" unless f.status.first =~ /2\d\d/
 						f.each_line do |line|
-							doc += "#{line.chomp} "
+							line = "#{line.chomp} " if remove_line_breaks
+							doc += line
 						end
 					end
 					succeeded = true
