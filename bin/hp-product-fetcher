@@ -165,7 +165,7 @@ class Fetcher
 						name: match[2].chomp.strip,
 						url:  "#{URI.join url, match[1]}"
 					}
-					log "Product url: #{product[:url]}"
+					log "Product URL: #{product[:url]}"
 					product_batch << product
 					page = match[3]
 				end
